@@ -1,24 +1,29 @@
 {
   "manifest_version": "0.3",
   "name": "tools.ref/ref-tools-mcp",
-  "version": "3.0.3-mcpb.2",
+  "version": "3.0.3-mcpb.3",
   "description": "Token-efficient documentation search for AI coding agents",
   "author": {
     "name": "Ref Tools"
+  },
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "Ref Tools API Key",
+      "description": "Your Ref Tools API key (optional)",
+      "sensitive": true,
+      "required": false
+    }
   },
   "server": {
     "type": "node",
     "entry_point": "dist/index.cjs",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/dist/index.cjs"]
-    }
-  },
-  "user_config": {
-    "REF_API_KEY": {
-      "description": "Ref Tools API key (optional)",
-      "required": false,
-      "secret": true
+      "args": ["${__dirname}/dist/index.cjs"],
+      "env": {
+        "REF_API_KEY": "${user_config.api_key}"
+      }
     }
   }
 }
