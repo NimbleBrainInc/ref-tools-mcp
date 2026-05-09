@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "@nimblebraininc/ref-tools-mcp",
-  "version": "3.0.3-mcpb.3",
+  "version": "3.0.3-mcpb.4",
   "description": "Token-efficient documentation search for AI coding agents",
   "author": {
     "name": "Ref Tools"
@@ -20,7 +20,9 @@
     "entry_point": "dist/index.cjs",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/dist/index.cjs"],
+      "args": [
+        "${__dirname}/dist/index.cjs"
+      ],
       "env": {
         "REF_API_KEY": "${user_config.api_key}"
       }
