@@ -1,7 +1,7 @@
 {
   "manifest_version": "0.3",
   "name": "@nimblebraininc/ref-tools-mcp",
-  "version": "3.0.3-mcpb.4",
+  "version": "3.0.3-mcpb.6",
   "description": "Token-efficient documentation search for AI coding agents",
   "author": {
     "name": "Ref Tools"
